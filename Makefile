@@ -22,9 +22,6 @@ TARGER_HEX = program.hex
 
 all: $(TARGER) $(TARGER_BIN) $(TARGER_HEX) 
 
-print:
-	@echo $(SRCS)
-	@echo $(OBJS)
 
 $(TARGER): $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $(OBJS)
@@ -41,7 +38,7 @@ $(TARGER_HEX): $(TARGER)
 %.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
-
+ 
 clean:
 	rm -f $(TARGER) $(TARGER_BIN) $(TARGER_HEX)
 	rm -f src/*.o
