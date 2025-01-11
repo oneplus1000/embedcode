@@ -1,0 +1,7 @@
+coverage
+*.o
+*.a
+*.elf
+*.hex
+*.bin
+.vscode

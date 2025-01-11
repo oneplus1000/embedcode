@@ -1,0 +1,1 @@
+qemu-system-arm -M lm3s6965evb -cpu cortex-m3 -kernel program.elf -nographic
