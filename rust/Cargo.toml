@@ -1,0 +1,20 @@
+[package]
+name = "my_embedded_project"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+# No dependencies needed for bare metal embedded, but you can add a crate like `cortex-m` for better hardware abstraction
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[lib]
+name = "my_embedded_project"
+path = "src/lib.rs"
+
+[build]
+target = "thumbv7m-none-eabi"
