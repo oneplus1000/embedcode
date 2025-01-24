@@ -3,10 +3,11 @@
 //start of the program
 .word _stack_top
 .word _start
+#.word Reset_Handler+0x1
 .section .isr_vector , "a", %progbits
 _start:
-    .word _stack_top        // Initial stack pointer
-    .word Reset_Handler     // Reset handler
+#    .word _stack_top        // Initial stack pointer
+#    .word Reset_Handler     // Reset handler
 
 #.section .text.Reset_Handler
 Reset_Handler:
